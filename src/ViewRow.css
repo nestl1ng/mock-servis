@@ -1,0 +1,212 @@
+.RowView{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 38px 56px;
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+    background: #F5F7FF;
+}
+/* Модальное окно */
+.first_View{
+    display: flex;
+    align-items: flex-start;
+    width: 1506px;
+    height: 92px;
+    background: #FFFFFF;
+    border-radius: 8px;
+} 
+.pos1{
+    position: absolute;
+    top:155px;
+    left:207px;
+}
+.pos2{
+    position: absolute;
+    top:440px;
+    left:207px;
+}
+.postMainTextView{
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: #46588B;
+margin:0px;
+}
+.TextHeader{
+    margin-left: 12px;
+}
+.MainTextView{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 48px;
+color: #46588B;
+margin: 0px;
+}
+.close_btn_View{
+cursor: pointer;
+padding: 12px;
+gap: 10px;
+width: 48px;
+height: 48px;
+background: #E7E9F3;
+border-radius: 8px;
+border: 0;
+}
+.close_btn_View:hover{
+    background: #0749DC;
+    color: #F1F2F4;
+}
+.HeaderRowView{
+display: flex;
+position: absolute;
+top:67px;
+left:207px;
+}
+
+.btn{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 32px;
+    width: 119px;
+    height: 40px;
+
+    background: #FFFFFF;
+/* Blue / 40 */
+
+    border: 1px solid #909BB9;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #909BB9;
+    cursor: pointer;
+}
+.save_btn{
+    margin-left: 24px; 
+}
+.btn:hover{
+    background: #0749DC;
+    color: #F1F2F4;
+}
+.modal_title{
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 48px;
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* Blue/60 */
+
+color: #46588B;
+}
+.MainTitle{
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 10px;
+line-height: 16px;
+/* identical to box height, or 160% */
+
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+/* Blue / 80 */
+
+color: #283250;
+}
+.Title{
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: center;
+
+/* Text/light/txt gray active */
+
+color: #46588B;
+}
+.div_first_View{
+    width: 403px;
+height: 60px;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 12px;
+}
+.second_View{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 1506px;
+    height: 177px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    position: absolute;
+    top:255px;
+    left:207px;
+}
+.Line2{
+display: flex;
+width: 1482px;
+height: 1px;
+background: #DADEE8;
+margin-left: 12px;
+}
+
+.down{
+    display: flex;
+  flex-direction: column;
+}
+.inLine{
+    display: flex;
+  flex-direction:row;
+}
+.long{
+    width: 1410px;
+}
+.column{
+    display: flex;
+    flex-direction:column;
+}
+.third_View{
+    position: absolute;
+    top:536px;
+    left:207px;
+
+width: 1506px;
+height: 491px;
+
+/* Color / white */
+
+background: #FFFFFF;
+border-radius: 8px;
+}
