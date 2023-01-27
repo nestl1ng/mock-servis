@@ -1,8 +1,8 @@
 import React from 'react'
 import './ModalAdd.css'; 
-import { FormFilter } from './FormFilter';
+import FormFilter from './FormFilter';
 
-export const ModalFilterAdd = ({title,active, CloseModal, setData_mas, setPageCount, items, setCurrantPage,masLength, mainURL, setFilterValue}) => {
+const ModalFilterAdd = ({title,active, CloseModal, setFilterValue}) => {
     if(!active){
         return null;
     };
@@ -14,10 +14,10 @@ export const ModalFilterAdd = ({title,active, CloseModal, setData_mas, setPageCo
                 <div className='modal_title'>{title}</div>
             </div>
             <div className='modal_body'>
-            <FormFilter setFilterValue={setFilterValue} mainURL={mainURL} masLength={masLength} setData_mas={setData_mas} setPageCount={setPageCount} items={items} setCurrantPage={setCurrantPage} CloseModal={CloseModal}/>
+            <FormFilter setFilterValue={setFilterValue} CloseModal={CloseModal}/>
             </div>        
         </div>
     </div>
   )
 }
-
+export default ModalFilterAdd;

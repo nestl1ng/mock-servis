@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form'
 import Multiselect from 'multiselect-react-dropdown';
 
-export const FormFilter = ({CloseModal,setData_mas, setPageCount, items, setCurrantPage, masLength,mainURL,currantPage,setFilterValue}) => {
+const FormFilter = ({CloseModal,setFilterValue}) => {
 
 
 const {register,formState:{errors, isValid}, handleSubmit} = useForm();
@@ -141,3 +141,4 @@ const onSubmit = (data) => {
     </form>
   )
 }
+export default FormFilter

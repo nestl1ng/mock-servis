@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
 
-export const FormAdd = ({CloseModal,setData_mas, setPageCount, items, setCurrantPage, masLength,mainURL}) => {
+const FormAdd = ({CloseModal,setData_mas, setPageCount, items, setCurrantPage, masLength,mainURL}) => {
 const {register,formState:{errors, isValid}, handleSubmit} = useForm();
 function formatDate(date) {
 
@@ -136,3 +136,4 @@ let date = new Date();
     </form>
   )
 }
+export default FormAdd;

@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios';
-export const MainTableOut = ({searchValue, setPageCount, items, currantPage, data_mas, setData_mas,setShowRowView, setParapmsRow, setMasLength,mainURL,filterValue}) => {
+const MainTableOut = ({searchValue, setPageCount, items, currantPage, data_mas, setData_mas,setShowRowView, setParapmsRow, setMasLength,mainURL,filterValue}) => {
 	const url = mainURL+"?_page="+currantPage+"&_limit="+items;
 
 	function OpenRow(params){
@@ -37,3 +37,4 @@ export const MainTableOut = ({searchValue, setPageCount, items, currantPage, dat
 	</tbody>
   )
 }
+export default MainTableOut;

@@ -1,8 +1,8 @@
 import React from 'react'
 import './ModalAdd.css'; 
-import { FormAdd } from './FormAdd';
+import FormAdd from './FormAdd';
 
-export const ModalAdd = ({title,active, CloseModal, setData_mas, setPageCount, items, setCurrantPage,masLength, mainURL}) => {
+ const ModalAdd = ({title,active, CloseModal, setData_mas, setPageCount, items, setCurrantPage,masLength, mainURL}) => {
     if(!active){
         return null;
     };
@@ -21,4 +21,4 @@ export const ModalAdd = ({title,active, CloseModal, setData_mas, setPageCount, i
     </div>
   )
 }
-
+export default ModalAdd;

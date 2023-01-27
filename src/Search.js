@@ -1,11 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFilter } from '@fortawesome/free-solid-svg-icons'
-import {ModalAdd} from './ModalAdd'
+import ModalAdd from './ModalAdd'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { ModalFilterAdd } from './ModalFilterAdd'
+import ModalFilterAdd from './ModalFilterAdd'
 
-export const Search = ({setSearchValue, setCurrantPage, CurrantPage, setData_mas, setPageCount, items, masLength, mainURL,setMainURL, setFilterValue}) => {
+ const Search = ({setSearchValue, setCurrantPage, setData_mas, setPageCount, items, masLength, mainURL, setFilterValue}) => {
     const [showModalAdd,setShowModalAdd] = React.useState(false);
     const [showModalFilterAdd,setShowModalFilterAdd] = React.useState(false);
     const [count, setCount] = React.useState('');
@@ -26,7 +26,8 @@ export const Search = ({setSearchValue, setCurrantPage, CurrantPage, setData_mas
     <button onClick={()=>{setShowModalAdd(true)}} className='AddNewRow'>Добавить</button>
     <ModalAdd title="Заявка" mainURL={mainURL} masLength={masLength} setCurrantPage={setCurrantPage} items={items} setPageCount={setPageCount} setData_mas={setData_mas} active={showModalAdd} CloseModal={CloseModal}>
     </ModalAdd>
-    <ModalFilterAdd setFilterValue={setFilterValue} CurrantPage={CurrantPage} items={items} mainURL={mainURL} title="Фильтр" active={showModalFilterAdd} CloseModal={CloseModal}/>
+    <ModalFilterAdd setFilterValue={setFilterValue} title="Фильтр" active={showModalFilterAdd} CloseModal={CloseModal}/>
     </div>
   )
 }
+export default Search;

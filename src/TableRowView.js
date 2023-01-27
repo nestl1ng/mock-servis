@@ -3,7 +3,7 @@ import './ViewRow.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 
-export const TableRowView = ({active,CloseView,parapmsRow})=> {
+const TableRowView = ({active,CloseView,parapmsRow})=> {
     if(!active){
         return null;
     };
@@ -85,3 +85,4 @@ export const TableRowView = ({active,CloseView,parapmsRow})=> {
     </div>
   )
 }
+export default TableRowView;

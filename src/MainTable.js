@@ -1,7 +1,7 @@
 import React from 'react'
-import { MainTableOut } from './MainTableOut';
-import { TableRowView } from './TableRowView';
-export default function MainTable({searchValue, setPageCount, items, currantPage, data_mas, setData_mas, setMasLength,mainURL,filterValue}) {
+import MainTableOut from './MainTableOut';
+import TableRowView from './TableRowView';
+const MainTable=({searchValue, setPageCount, items, currantPage, data_mas, setData_mas, setMasLength,mainURL,filterValue})=> {
 	const [showRowView,setShowRowView] = React.useState(false);
 	const [parapmsRow,setParapmsRow] = React.useState([]);
 	const CloseView=()=>{
@@ -28,3 +28,4 @@ export default function MainTable({searchValue, setPageCount, items, currantPage
       </div>
   )
 }
+export default MainTable;
