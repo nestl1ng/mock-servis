@@ -1,6 +1,6 @@
 import React from 'react'
 import MainTableOut from './MainTableOut';
-import TableRowView from './TableRowView';
+import TableRowView from './TableView/TableRowView';
 import './Table.css'
 
 const MainTable=({searchValue, setPageCount, items, currantPage, data_mas, setData_mas, setMasLength,mainURL,filterValue})=> {
