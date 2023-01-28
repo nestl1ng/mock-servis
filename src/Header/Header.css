@@ -1,0 +1,83 @@
+.HeaderRowMain {
+  display: flex;
+}
+
+.HeaderRow {
+  display: flex;
+  align-items: center;
+}
+
+.MainText {
+  margin-right: 173px;
+  width: 399px;
+  height: 48px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  color: #46588b;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.Line {
+  width: 1506px;
+  height: 0px;
+  border: 1px solid #909bb9;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-bottom: 24px;
+}
+
+.Filter {
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 10px;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #b5bcd1;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0 36px 0 36px;
+  cursor: pointer;
+}
+
+.AddNewRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px 0px 0px;
+  width: 133px;
+  height: 40px;
+  background: #0749dc;
+  border-radius: 8px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #f5f7ff;
+  border-color: #ffffff;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.AddNewRow:before {
+  content: "+";
+  font-size: 32px;
+  font-weight: 100;
+  margin-right: 13px;
+}

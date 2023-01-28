@@ -1,9 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFilter } from '@fortawesome/free-solid-svg-icons'
-import ModalAdd from './ModalAdd'
+import ModalAdd from '../Buttons/Request/ModalAdd'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import ModalFilterAdd from './ModalFilterAdd'
+import ModalFilterAdd from '../Buttons/Filter/ModalFilterAdd'
+import './Search.css'
 
  const Search = ({setSearchValue, setCurrantPage, setData_mas, setPageCount, items, masLength, mainURL, setFilterValue}) => {
     const [showModalAdd,setShowModalAdd] = React.useState(false);
@@ -19,8 +20,8 @@ import ModalFilterAdd from './ModalFilterAdd'
     }
   return (
     <div className='HeaderRow'>
-    <div className='MainInput_div'>
-    <input value={count} onChange={(event)=>setCount(event.target.value)} className='MainInput' placeholder="Искать"></input><FontAwesomeIcon className='icon_search' onClick={()=>{SearchItem(count)}} icon={faSearch} />
+    <div className='MainInputDiv'>
+    <input value={count} onChange={(event)=>setCount(event.target.value)} className='MainInput' placeholder="Искать"></input><FontAwesomeIcon className='IconSearch' onClick={()=>{SearchItem(count)}} icon={faSearch} />
     </div>
     <button onClick={()=>{setShowModalFilterAdd(true)}} className='Filter'><FontAwesomeIcon icon={faFilter} /></button>
     <button onClick={()=>{setShowModalAdd(true)}} className='AddNewRow'>Добавить</button>

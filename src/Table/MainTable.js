@@ -1,6 +1,8 @@
 import React from 'react'
 import MainTableOut from './MainTableOut';
 import TableRowView from './TableRowView';
+import './Table.css'
+
 const MainTable=({searchValue, setPageCount, items, currantPage, data_mas, setData_mas, setMasLength,mainURL,filterValue})=> {
 	const [showRowView,setShowRowView] = React.useState(false);
 	const [parapmsRow,setParapmsRow] = React.useState([]);
@@ -8,7 +10,7 @@ const MainTable=({searchValue, setPageCount, items, currantPage, data_mas, setDa
 		setShowRowView(false);
 	  }
   return (
-      <div className='lol'>
+      <div className='Table'>
         <table className="MainTable">
 	<thead>
 		<tr>

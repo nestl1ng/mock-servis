@@ -1,10 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form'
 import Multiselect from 'multiselect-react-dropdown';
+import '../Form.css'; 
 
 const FormFilter = ({CloseModal,setFilterValue}) => {
-
-
 const {register,formState:{errors, isValid}, handleSubmit} = useForm();
 
 let name_is = React.createRef();
@@ -18,25 +17,16 @@ const onSubmit = (data) => {
     let type = type_dns.current.getSelectedItems(); 
     let stat = status.current.getSelectedItems(); 
     setFilterValue('');
-    for(let i=0; i<name.length ;i++){
-      setFilterValue(prev=>(prev+"&name_is="+name[i]));
-    }
-    for(let i=0; i<dom.length ;i++){
-      setFilterValue(prev=>(prev+"&dom_name="+dom[i]));
-    }
-    for(let i=0; i<type.length ;i++){
-      setFilterValue(prev=>(prev+"&type_dns="+type[i]));
-    }
-    for(let i=0; i<stat.length ;i++){
-      setFilterValue(prev=>(prev+"&status="+stat[i]));
-    }
+    name.forEach(item => setFilterValue(prev=>(prev+"&name_is="+ item)));
+    dom.forEach(item => setFilterValue(prev=>(prev+"&dom_name="+ item)));
+    type.forEach(item => setFilterValue(prev=>(prev+"&type_dns="+ item)));
+    stat.forEach(item => setFilterValue(prev=>(prev+"&status="+ item)));
     if(data.vnutr!==""){
       setFilterValue(prev=>(prev+"&internal_network="+data.vnutr));
     }
     if(data.vnesh!==""){
       setFilterValue(prev=>(prev+"&external_network="+data.vnesh));
     }
-    //console.log(data.vnesh);
     CloseModal();
   }
   const styleSelectBox={
@@ -132,11 +122,11 @@ const onSubmit = (data) => {
             {...register('vnesh')}
             />
           </div>
-          <div className='modal_footer'>
+          <div className='ModalFooter'>
           <div>{(errors.vnutr || 
                  errors.vnesh) && <p className='warningMark'>Все поля обязательны к заполнению</p>}</div>
-            <button className='btn close_btn' onClick={CloseModal}>Отмена</button>
-            <input className='btn save_btn' type='submit' value="Сохранить" disabled={!isValid}/>
+            <button className='btn CloseBtn' onClick={CloseModal}>Отмена</button>
+            <input className='btn SaveBtn' type='submit' value="Сохранить" disabled={!isValid}/>
           </div>
     </form>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios';
+
 const MainTableOut = ({searchValue, setPageCount, items, currantPage, data_mas, setData_mas,setShowRowView, setParapmsRow, setMasLength,mainURL,filterValue}) => {
 	const url = mainURL+"?_page="+currantPage+"&_limit="+items;
 

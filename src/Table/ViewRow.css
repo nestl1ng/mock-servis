@@ -1,0 +1,153 @@
+.RowView {
+  padding: 38px 56px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #f5f7ff;
+}
+
+.HeaderRowView {
+  display: flex;
+  position: absolute;
+  top: 67px;
+  left: 207px;
+}
+
+.FirstView {
+  display: flex;
+  width: 1506px;
+  height: 92px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.DivFirstView {
+  width: 403px;
+  height: 60px;
+  padding: 8px 12px;
+}
+
+.pos1 {
+  position: absolute;
+  top: 155px;
+  left: 207px;
+}
+
+.pos2 {
+  position: absolute;
+  top: 440px;
+  left: 207px;
+}
+
+.postMainTextView {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #46588b;
+  margin: 0px;
+}
+
+.TextHeader {
+  margin-left: 12px;
+}
+
+.MainTextView {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #46588b;
+  margin: 0px;
+}
+
+.CloseBtnView {
+  cursor: pointer;
+  padding: 12px;
+  gap: 10px;
+  width: 48px;
+  height: 48px;
+  background: #e7e9f3;
+  border-radius: 8px;
+  border: 0;
+}
+
+.CloseBtnView:hover {
+  background: #0749dc;
+  color: #f1f2f4;
+}
+
+.MainTitle {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #283250;
+}
+
+.Title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #46588b;
+}
+
+.SecondView {
+  width: 1506px;
+  height: 177px;
+  background: #ffffff;
+  border-radius: 8px;
+  position: absolute;
+  top: 255px;
+  left: 207px;
+}
+
+.Line2 {
+  width: 1482px;
+  height: 1px;
+  background: #dadee8;
+  margin-left: 12px;
+}
+
+.down {
+  display: flex;
+  flex-direction: column;
+}
+
+.inLine {
+  display: flex;
+}
+
+.long {
+  width: 1410px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.ThirdView {
+  position: absolute;
+  top: 536px;
+  left: 207px;
+  width: 1506px;
+  height: 491px;
+  background: #ffffff;
+  border-radius: 8px;
+}

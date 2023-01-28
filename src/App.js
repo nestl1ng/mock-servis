@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
-import MainHeader from './MainHeader';
-import MainTable from './MainTable';
-import Pagination from './Pagination';
+import './Table/Table.css'
+import MainHeader from './Header/MainHeader';
+import MainTable from './Table/MainTable';
+import Pagination from './Table/Pagination/Pagination';
+
 function App() {
   //items = кол-ву строк в таблице на страницу
   const items = 4;

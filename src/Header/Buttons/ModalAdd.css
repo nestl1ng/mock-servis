@@ -1,0 +1,83 @@
+.Modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ModalContent {
+  width: 736px;
+  height: 814px;
+  background: #ffffff;
+  box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 34px 48px 34px 48px;
+}
+
+.ModalHeader,
+.ModalFooter {
+  padding: 12px;
+}
+
+.ModalBody {
+  padding: 20px;
+}
+
+.ModalFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  flex-direction: column;
+  justify-content: center;
+  width: 119px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #909bb9;
+  border-radius: 8px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #909bb9;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background: #909bb9;
+  color: white;
+}
+
+.SaveBtn {
+  margin-left: 24px;
+}
+
+.btn:hover {
+  background: #0749dc;
+  color: #f1f2f4;
+}
+
+.ModalTitle {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  color: #46588b;
+}
+
+.ModalContent.filter {
+  width: 736px;
+  height: 620px;
+}

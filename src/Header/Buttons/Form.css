@@ -1,0 +1,53 @@
+.field2 {
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border: 1px solid #dadee8;
+  border-radius: 12px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  color: #909bb9;
+  margin-bottom: 16px;
+  padding: 20px 12px 8px 12px;
+}
+
+.field2 option {
+  color: #46588b;
+}
+
+label[for="field2"] {
+  position: absolute;
+  padding-left: 16px;
+  padding-top: 3px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 16px;
+  align-items: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #97c1ff;
+}
+
+.field {
+  position: relative;
+}
+
+.warningMark {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  align-items: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ff0000;
+  margin-right: 50px;
+}

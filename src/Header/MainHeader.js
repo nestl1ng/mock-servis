@@ -1,5 +1,7 @@
 import React from 'react'
-import  Search  from './Search'
+import  Search  from './Search/Search'
+import './Header.css'
+
  const MainHeader=({searchValue,setSearchValue, setCurrantPage, setData_mas, setPageCount, items, masLength, mainURL,setFilterValue})=> {
   return (
     <div>

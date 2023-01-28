@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
+import '../Form.css'; 
 
 const FormAdd = ({CloseModal,setData_mas, setPageCount, items, setCurrantPage, masLength,mainURL}) => {
 const {register,formState:{errors, isValid}, handleSubmit} = useForm();
@@ -121,7 +122,7 @@ let date = new Date();
             {...register('osnov',{required:true})}
             />
           </div>
-          <div className='modal_footer'>
+          <div className='ModalFooter'>
           <div>{(errors.dom_name || 
             errors.internal_network || 
             errors.external_network || 
@@ -129,8 +130,8 @@ let date = new Date();
             errors.polz_dom ||
             errors.fio ||
             errors.osnov) && <p className='warningMark'>Все поля обязательны к заполнению</p>}</div>
-            <button className='btn close_btn' onClick={CloseModal}>Отмена</button>
-            <input className='btn save_btn' type='submit' value="Сохранить" disabled={!isValid}/>
+            <button className='btn CloseBtn' onClick={CloseModal}>Отмена</button>
+            <input className='btn SaveBtn' type='submit' value="Сохранить" disabled={!isValid}/>
             {/* onClick={createPost1} */}
           </div>
     </form>

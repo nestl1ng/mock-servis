@@ -1,0 +1,30 @@
+.MainInput {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 8px;
+  width: 689px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #909bb9;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.MainInputDiv {
+  position: relative;
+}
+
+.IconSearch {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  cursor: pointer;
+}

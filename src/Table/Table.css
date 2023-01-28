@@ -1,0 +1,29 @@
+.MainTable {
+  width: 100%;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #46588b;
+  -webkit-border-horizontal-spacing: 0px;
+}
+
+.MainTable th {
+  height: 60px;
+  font-weight: bold;
+  padding: 5px;
+  background: #ffffff;
+  text-align: inherit;
+}
+
+.MainTable td {
+  background: #ffffff;
+  height: 56px;
+  padding: 5px;
+}
+
+table.MainTable tr:hover td {
+  background: #ecf4ff;
+  cursor: pointer;
+}
