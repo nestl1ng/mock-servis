@@ -2,7 +2,7 @@ import React from "react";
 import "../ModalAdd.css";
 import FormFilter from "./FormFilter";
 
-const ModalFilterAdd = ({ title, active, CloseModal, setFilterValue }) => {
+const ModalFilterAdd = ({ title, active, CloseModal, setFilterValue,setFormInputsFilter }) => {
   if (!active) {
     return null;
   }
@@ -16,7 +16,7 @@ const ModalFilterAdd = ({ title, active, CloseModal, setFilterValue }) => {
           <div className="ModalTitle">{title}</div>
         </div>
         <div className="ModalBody">
-          <FormFilter setFilterValue={setFilterValue} CloseModal={CloseModal} />
+          <FormFilter setFormInputsFilter={setFormInputsFilter} setFilterValue={setFilterValue} CloseModal={CloseModal} />
         </div>
       </div>
     </div>

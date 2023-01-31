@@ -12,7 +12,6 @@ const MainTableOut = ({searchValue, setPageCount, items, currantPage, data_mas, 
 	React.useEffect(() => {
 		axios.get(url+"&"+searchValue+filterValue).then((response) => {
 			setData_mas(response.data);
-			console.log(url+"&"+searchValue+filterValue);
 		});
 		axios.get(mainURL+"?"+searchValue+filterValue).then((response) => {
 			setMasLength(response.data.length);

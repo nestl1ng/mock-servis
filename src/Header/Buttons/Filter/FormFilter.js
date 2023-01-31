@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import Multiselect from 'multiselect-react-dropdown';
 import '../Form.css'; 
 
-const FormFilter = ({CloseModal,setFilterValue}) => {
+const FormFilter = ({CloseModal,setFilterValue,setFormInputsFilter}) => {
 const {register,formState:{errors, isValid}, handleSubmit} = useForm();
 
 let name_is = React.createRef();
@@ -11,24 +11,34 @@ let dom_name = React.createRef();
 let type_dns = React.createRef();
 let status = React.createRef();
 
-const onSubmit = (data) => {
-    let name = name_is.current.getSelectedItems(); 
-    let dom = dom_name.current.getSelectedItems(); 
-    let type = type_dns.current.getSelectedItems(); 
-    let stat = status.current.getSelectedItems(); 
-    setFilterValue('');
-    name.forEach(item => setFilterValue(prev=>(prev+"&name_is="+ item)));
-    dom.forEach(item => setFilterValue(prev=>(prev+"&dom_name="+ item)));
-    type.forEach(item => setFilterValue(prev=>(prev+"&type_dns="+ item)));
-    stat.forEach(item => setFilterValue(prev=>(prev+"&status="+ item)));
-    if(data.vnutr!==""){
-      setFilterValue(prev=>(prev+"&internal_network="+data.vnutr));
-    }
-    if(data.vnesh!==""){
-      setFilterValue(prev=>(prev+"&external_network="+data.vnesh));
-    }
-    CloseModal();
+
+const onSubmit = React.useCallback((data) => {
+
+  let name = name_is.current.getSelectedItems(); 
+  let dom = dom_name.current.getSelectedItems(); 
+  let type = type_dns.current.getSelectedItems(); 
+  let stat = status.current.getSelectedItems(); 
+
+  setFilterValue('');
+
+  setFormInputsFilter({names:name,doms:dom,types:type,stats:stat});
+  
+  name.forEach(item => setFilterValue(prev=>(prev+"&name_is="+ item)));
+  dom.forEach(item => setFilterValue(prev=>(prev+"&dom_name="+ item)));
+  type.forEach(item => setFilterValue(prev=>(prev+"&type_dns="+ item)));
+  stat.forEach(item => setFilterValue(prev=>(prev+"&status="+ item)));
+  if(data.vnutr!==""){
+    setFilterValue(prev=>(prev+"&internal_network="+data.vnutr));
   }
+  if(data.vnesh!==""){
+    setFilterValue(prev=>(prev+"&external_network="+data.vnesh));
+  }
+  
+  CloseModal();
+},[CloseModal, dom_name, name_is, setFilterValue, setFormInputsFilter, status, type_dns]);
+
+
+
   const styleSelectBox={
     option: {
       'color': '#46588B',
@@ -57,8 +67,6 @@ const onSubmit = (data) => {
           },
       }
 
-
-      
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
         <div className='field sel'>

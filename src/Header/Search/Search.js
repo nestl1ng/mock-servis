@@ -6,7 +6,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import ModalFilterAdd from '../Buttons/Filter/ModalFilterAdd'
 import './Search.css'
 
- const Search = ({setSearchValue, setCurrantPage, setData_mas, setPageCount, items, masLength, mainURL, setFilterValue}) => {
+ const Search = ({setSearchValue, setCurrantPage, setData_mas, setPageCount, items, masLength, mainURL, setFilterValue, setFormInputsFilter}) => {
     const [showModalAdd,setShowModalAdd] = React.useState(false);
     const [showModalFilterAdd,setShowModalFilterAdd] = React.useState(false);
     const [count, setCount] = React.useState('');
@@ -27,7 +27,7 @@ import './Search.css'
     <button onClick={()=>{setShowModalAdd(true)}} className='AddNewRow'>Добавить</button>
     <ModalAdd title="Заявка" mainURL={mainURL} masLength={masLength} setCurrantPage={setCurrantPage} items={items} setPageCount={setPageCount} setData_mas={setData_mas} active={showModalAdd} CloseModal={CloseModal}>
     </ModalAdd>
-    <ModalFilterAdd setFilterValue={setFilterValue} title="Фильтр" active={showModalFilterAdd} CloseModal={CloseModal}/>
+    <ModalFilterAdd setFormInputsFilter={setFormInputsFilter} setFilterValue={setFilterValue} title="Фильтр" active={showModalFilterAdd} CloseModal={CloseModal}/>
     </div>
   )
 }
