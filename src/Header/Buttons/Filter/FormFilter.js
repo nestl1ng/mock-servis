@@ -22,7 +22,6 @@ const onSubmit = React.useCallback((data) => {
   setFilterValue('');
 
   setFormInputsFilter({names:name,doms:dom,types:type,stats:stat});
-  
   name.forEach(item => setFilterValue(prev=>(prev+"&name_is="+ item)));
   dom.forEach(item => setFilterValue(prev=>(prev+"&dom_name="+ item)));
   type.forEach(item => setFilterValue(prev=>(prev+"&type_dns="+ item)));
