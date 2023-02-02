@@ -14,7 +14,7 @@ import FilterAlarm from './FilterAlarm'
       </div>
       <div className='Line'>
       </div>
-      <FilterAlarm filterValue={filterValue} setFilterValue={setFilterValue}  formInputsFilter={formInputsFilter} setFormInputsFilter={setFormInputsFilter}/>
+      <FilterAlarm formInputsFilter={formInputsFilter} setFilterValue={setFilterValue}/>
     </div>
   )
 }
