@@ -27,7 +27,7 @@ import './Search.css'
     <button onClick={()=>{setShowModalAdd(true)}} className='AddNewRow'>Добавить</button>
     <ModalAdd title="Заявка" mainURL={mainURL} masLength={masLength} setCurrantPage={setCurrantPage} items={items} setPageCount={setPageCount} setData_mas={setData_mas} active={showModalAdd} CloseModal={CloseModal}>
     </ModalAdd>
-    <ModalFilterAdd setFormInputsFilter={setFormInputsFilter} setFilterValue={setFilterValue} title="Фильтр" active={showModalFilterAdd} CloseModal={CloseModal}/>
+    <ModalFilterAdd setCurrantPage={setCurrantPage} setFormInputsFilter={setFormInputsFilter} setFilterValue={setFilterValue} title="Фильтр" active={showModalFilterAdd} CloseModal={CloseModal}/>
     </div>
   )
 }

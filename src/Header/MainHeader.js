@@ -1,7 +1,7 @@
 import React from 'react'
 import  Search  from './Search/Search'
 import './Header.css'
-import FilterAlarm from './FilterAlarm'
+import FilterAlarm from './FilterAlarm/FilterAlarm'
 
  const MainHeader=({searchValue,setSearchValue, setCurrantPage, setData_mas, setPageCount, items, masLength, mainURL,setFilterValue,filterValue})=> {
   const [formInputsFilter, setFormInputsFilter] = React.useState({});
@@ -14,7 +14,7 @@ import FilterAlarm from './FilterAlarm'
       </div>
       <div className='Line'>
       </div>
-      <FilterAlarm formInputsFilter={formInputsFilter} setFilterValue={setFilterValue}/>
+      <FilterAlarm filterValue={filterValue} formInputsFilter={formInputsFilter} setFilterValue={setFilterValue}/>
     </div>
   )
 }

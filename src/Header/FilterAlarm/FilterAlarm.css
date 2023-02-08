@@ -1,0 +1,30 @@
+.FilterAlarm {
+    min-height: 24px;
+    display: flex;
+    width: 1506px;
+    word-break: break-all;
+    flex-direction: column;
+  }
+  
+  .FilterInputsAlarm {
+    width: fit-content;
+    display: none;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    align-items: center;
+    color: #46588b;
+    background: #c8deff;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin: 2px;
+  }
+  .FilterInputsAlarm.active {
+    display: flex;
+  }
+  .faWindowClose {
+    margin-left: 5px;
+    cursor: pointer;
+  }

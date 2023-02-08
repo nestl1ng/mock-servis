@@ -339,6 +339,23 @@
       "polz_dom": "OOO \"TEST\"",
       "fio": "Тестов В.А",
       "osnov": "Основание"
+    },
+    {
+      "id": 21,
+      "status": "Изменение",
+      "dom_name": "test2.exe",
+      "type_dns": "TXT",
+      "hpsm": "",
+      "name_is": "Ит Сервис",
+      "internal_network": "176.23.23.23",
+      "external_network": "2346.345.123.4",
+      "date": "2023-02-03",
+      "inform": "",
+      "znach_is": "",
+      "zayav": "Эдуард",
+      "polz_dom": "Эдуард  ООО",
+      "fio": "Гайдукевич Э.В",
+      "osnov": "ForFun"
     }
   ]
 }

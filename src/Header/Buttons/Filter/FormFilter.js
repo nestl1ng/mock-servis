@@ -2,9 +2,17 @@ import React from 'react';
 import { useForm } from 'react-hook-form'
 import Multiselect from 'multiselect-react-dropdown';
 import '../Form.css'; 
+import axios from 'axios';
 
-const FormFilter = ({CloseModal,setFilterValue,setFormInputsFilter}) => {
+const FormFilter = ({CloseModal,setFilterValue,setFormInputsFilter,setCurrantPage}) => {
 const {register,formState:{errors, isValid}, handleSubmit} = useForm();
+const [name_dom, setName_dom] = React.useState('');
+
+React.useEffect(() => {
+  axios.get('http://localhost:3001/data').then((response) => {
+    setName_dom(response.data);
+  });
+  }, [setName_dom]);
 
 let name_is = React.createRef();
 let dom_name = React.createRef();
@@ -21,7 +29,7 @@ const onSubmit = React.useCallback((data) => {
 
   setFilterValue('');
 
-  setFormInputsFilter({names:name,doms:dom,types:type,stats:stat});
+ 
   name.forEach(item => setFilterValue(prev=>(prev+"&name_is="+ item)));
   dom.forEach(item => setFilterValue(prev=>(prev+"&dom_name="+ item)));
   type.forEach(item => setFilterValue(prev=>(prev+"&type_dns="+ item)));
@@ -32,9 +40,10 @@ const onSubmit = React.useCallback((data) => {
   if(data.vnesh!==""){
     setFilterValue(prev=>(prev+"&external_network="+data.vnesh));
   }
-  
+  setFormInputsFilter({names:name,doms:dom,types:type,stats:stat,vnutr:data.vnutr,vnesh:data.vnesh});
+  setCurrantPage(1);
   CloseModal();
-},[CloseModal, dom_name, name_is, setFilterValue, setFormInputsFilter, status, type_dns]);
+},[CloseModal, dom_name, name_is, setCurrantPage, setFilterValue, setFormInputsFilter, status, type_dns]);
 
 
 
@@ -85,7 +94,7 @@ const onSubmit = React.useCallback((data) => {
           <Multiselect
           style={styleSelectBox}
           isObject={false}
-          options={['Option1','Option2']} 
+          options={Object.values(name_dom).map((params) => params.dom_name)} 
           showCheckbox
           showArrow
           closeIcon='circle'
