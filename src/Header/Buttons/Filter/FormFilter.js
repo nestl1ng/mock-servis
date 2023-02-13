@@ -4,7 +4,7 @@ import Multiselect from 'multiselect-react-dropdown';
 import '../Form.css'; 
 import axios from 'axios';
 
-const FormFilter = ({CloseModal,setFilterValue,setFormInputsFilter,setCurrantPage}) => {
+const FormFilter = ({CloseModal,setFormInputsFilter,setCurrantPage}) => {
 const {register,formState:{errors, isValid}, handleSubmit} = useForm();
 const [name_dom, setName_dom] = React.useState('');
 
@@ -27,23 +27,10 @@ const onSubmit = React.useCallback((data) => {
   let type = type_dns.current.getSelectedItems(); 
   let stat = status.current.getSelectedItems(); 
 
-  setFilterValue('');
-
- 
-  name.forEach(item => setFilterValue(prev=>(prev+"&name_is="+ item)));
-  dom.forEach(item => setFilterValue(prev=>(prev+"&dom_name="+ item)));
-  type.forEach(item => setFilterValue(prev=>(prev+"&type_dns="+ item)));
-  stat.forEach(item => setFilterValue(prev=>(prev+"&status="+ item)));
-  if(data.vnutr!==""){
-    setFilterValue(prev=>(prev+"&internal_network="+data.vnutr));
-  }
-  if(data.vnesh!==""){
-    setFilterValue(prev=>(prev+"&external_network="+data.vnesh));
-  }
-  setFormInputsFilter({names:name,doms:dom,types:type,stats:stat,vnutr:data.vnutr,vnesh:data.vnesh});
+  setFormInputsFilter({'&name_is=':name,'&dom_name=':dom,'&type_dns=':type,'&status=':stat,'&internal_network=':data.vnutr,'&external_network=':data.vnesh});
   setCurrantPage(1);
   CloseModal();
-},[CloseModal, dom_name, name_is, setCurrantPage, setFilterValue, setFormInputsFilter, status, type_dns]);
+},[CloseModal, dom_name, name_is, setCurrantPage, setFormInputsFilter, status, type_dns]);
 
 
 

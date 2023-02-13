@@ -3,7 +3,7 @@ import MainTableOut from './MainTableOut';
 import TableRowView from './TableView/TableRowView';
 import './Table.css'
 
-const MainTable=({searchValue, setPageCount, items, currantPage, data_mas, setData_mas, setMasLength,mainURL,filterValue})=> {
+const MainTable=({searchValue, setPageCount, items, currantPage, data_mas, setData_mas, setMasLength,mainURL,formInputsFilter})=> {
 	const [showRowView,setShowRowView] = React.useState(false);
 	const [parapmsRow,setParapmsRow] = React.useState([]);
 	const CloseView=()=>{
@@ -24,7 +24,7 @@ const MainTable=({searchValue, setPageCount, items, currantPage, data_mas, setDa
       		<th>Дата</th>
 		</tr>
 	</thead>
-			<MainTableOut filterValue={filterValue} mainURL={mainURL} setMasLength={setMasLength} setParapmsRow={setParapmsRow} setShowRowView={setShowRowView} data_mas={data_mas} setData_mas={setData_mas} items={items} setPageCount={setPageCount} searchValue={searchValue}  currantPage={currantPage}/>
+			<MainTableOut formInputsFilter={formInputsFilter} mainURL={mainURL} setMasLength={setMasLength} setParapmsRow={setParapmsRow} setShowRowView={setShowRowView} data_mas={data_mas} setData_mas={setData_mas} items={items} setPageCount={setPageCount} searchValue={searchValue}  currantPage={currantPage}/>
 </table>
 	<TableRowView CloseView={CloseView} active={showRowView} parapmsRow={parapmsRow}/>
       </div>

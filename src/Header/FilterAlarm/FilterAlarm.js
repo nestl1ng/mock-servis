@@ -3,88 +3,71 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import './FilterAlarm.css'
 
-const FilterAlarm = ({formInputsFilter,setFilterValue,filterValue}) => {
-    // React.useEffect(()=>{
-    //   // for(let key in formInputsFilter ){
-    //   //   console.log('formInputsFilter= '+formInputsFilter[key])
-    //   // }
-    //   console.log('filterValue= '+filterValue);
-    // },[filterValue]);
+const FilterAlarm = ({formInputsFilter,setFormInputsFilter}) => {
 
-    const deleteFilter=(typeStrFilter,typeFilter)=>{
-      setFilterValue(prev=>prev.replaceAll(typeStrFilter, "").trim());
-      if((typeFilter==='vnutr')||(typeFilter==='vnesh')){
-        let del = formInputsFilter[typeFilter];
-        setFilterValue(prev=>prev.replace(del, "").trim());
-      } else{
-        formInputsFilter[typeFilter].forEach(value=>setFilterValue(prev=>prev.replace(value, "")));
-      }
-      formInputsFilter[typeFilter]= undefined;
-      ActiveEll(typeFilter);
-    }
     const ActiveEll=(key)=>{
         if((typeof formInputsFilter[key]!== "undefined")&&(formInputsFilter[key].length!==0)){
            return true;
-        } else return false;
+        } else return false; 
     }
 
   return (
     <div className="FilterAlarm">
-      <span className={`FilterInputsAlarm ${ActiveEll('names') ? "active" : ""}`}>
-        {'Наименование ИС: '+formInputsFilter['names']}{" "}
+      <span className={`FilterInputsAlarm ${ActiveEll('&name_is=') ? "active" : ""}`}>
+        {'Наименование ИС: '+formInputsFilter['&name_is=']}{" "}
         <FontAwesomeIcon
           onClick={() => {
-            deleteFilter('&name_is=','names');
+            setFormInputsFilter({...formInputsFilter,'&name_is=':''})
           }}
           className="faWindowClose"
           icon={faWindowClose}
         />
       </span>
-      <span className={`FilterInputsAlarm ${ActiveEll('doms') ? "active" : ""}`}>
-        {'Доменное имя: '+formInputsFilter['doms']}{" "}
+      <span className={`FilterInputsAlarm ${ActiveEll('&dom_name=') ? "active" : ""}`}>
+        {'Доменное имя: '+formInputsFilter['&dom_name=']}{" "}
         <FontAwesomeIcon
           onClick={() => {
-            deleteFilter('&dom_name=','doms');
+            setFormInputsFilter({...formInputsFilter,'&dom_name=':''})
           }}
           className="faWindowClose"
           icon={faWindowClose}
         />
       </span>
-      <span className={`FilterInputsAlarm ${ActiveEll('types') ? "active" : ""}`}>
-        {'Тип DNS записи: '+formInputsFilter['types']}{" "}
+      <span className={`FilterInputsAlarm ${ActiveEll('&type_dns=') ? "active" : ""}`}>
+        {'Тип DNS записи: '+formInputsFilter['&type_dns=']}{" "}
         <FontAwesomeIcon
           onClick={() => {
-            deleteFilter('&type_dns=','types');
+            setFormInputsFilter({...formInputsFilter,'&type_dns=':''})
           }}
           className="faWindowClose"
           icon={faWindowClose}
         />
       </span>
-      <span className={`FilterInputsAlarm ${ActiveEll('stats') ? "active" : ""}`}>
-        {'Статус: '+formInputsFilter['stats']}{" "}
+      <span className={`FilterInputsAlarm ${ActiveEll('&status=') ? "active" : ""}`}>
+        {'Статус: '+formInputsFilter['&status=']}{" "}
         <FontAwesomeIcon
           onClick={() => {
-            deleteFilter('&status=','stats');
+            setFormInputsFilter({...formInputsFilter,'&status=':''})
           }}
           className="faWindowClose"
           icon={faWindowClose}
         />
       </span>
-      <span className={`FilterInputsAlarm ${ActiveEll('vnutr') ? "active" : ""}`}>
-        {'Внутренняя сеть: '+formInputsFilter['vnutr']}
+      <span className={`FilterInputsAlarm ${ActiveEll('&internal_network=') ? "active" : ""}`}>
+        {'Внутренняя сеть: '+formInputsFilter['&internal_network=']}
         <FontAwesomeIcon
           onClick={() => {
-            deleteFilter('&internal_network=','vnutr');
+            setFormInputsFilter({...formInputsFilter,'&internal_network=':''})
           }}
           className="faWindowClose"
           icon={faWindowClose}
         />
       </span>
-      <span className={`FilterInputsAlarm ${ActiveEll('vnesh') ? "active" : ""}`}>
-        {'Внешняя сеть: '+formInputsFilter['vnesh']}
+      <span className={`FilterInputsAlarm ${ActiveEll('&external_network=') ? "active" : ""}`}>
+        {'Внешняя сеть: '+formInputsFilter['&external_network=']}
         <FontAwesomeIcon
           onClick={() => {
-            deleteFilter('&external_network=','vnesh');
+            setFormInputsFilter({...formInputsFilter,'&external_network=':''})
           }}
           className="faWindowClose"
           icon={faWindowClose}
