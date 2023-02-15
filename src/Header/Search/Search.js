@@ -1,15 +1,16 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFilter } from '@fortawesome/free-solid-svg-icons'
 import ModalAdd from '../Buttons/Request/ModalAdd'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import ModalFilterAdd from '../Buttons/Filter/ModalFilterAdd'
 import './Search.css'
+import { useState } from 'react';
+
 
  const Search = ({setSearchValue, setCurrantPage, setData_mas, setPageCount, items, masLength, mainURL, setFormInputsFilter}) => {
-    const [showModalAdd,setShowModalAdd] = React.useState(false);
-    const [showModalFilterAdd,setShowModalFilterAdd] = React.useState(false);
-    const [count, setCount] = React.useState('');
+    const [showModalAdd,setShowModalAdd] = useState(false);
+    const [showModalFilterAdd,setShowModalFilterAdd] = useState(false);
+    const [count, setCount] = useState('');
     const CloseModal=()=>{
       setShowModalAdd(false);
       setShowModalFilterAdd(false);

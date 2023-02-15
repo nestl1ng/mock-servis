@@ -1,26 +1,29 @@
-import React from 'react';
 import { useForm } from 'react-hook-form'
 import Multiselect from 'multiselect-react-dropdown';
 import '../Form.css'; 
 import axios from 'axios';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { createRef } from 'react';
+import { useCallback } from 'react';
 
 const FormFilter = ({CloseModal,setFormInputsFilter,setCurrantPage}) => {
 const {register,formState:{errors, isValid}, handleSubmit} = useForm();
-const [name_dom, setName_dom] = React.useState('');
+const [name_dom, setName_dom] = useState('');
 
-React.useEffect(() => {
+useEffect(() => {
   axios.get('http://localhost:3001/data').then((response) => {
     setName_dom(response.data);
   });
   }, [setName_dom]);
 
-let name_is = React.createRef();
-let dom_name = React.createRef();
-let type_dns = React.createRef();
-let status = React.createRef();
+let name_is = createRef();
+let dom_name = createRef();
+let type_dns = createRef();
+let status = createRef();
 
 
-const onSubmit = React.useCallback((data) => {
+const onSubmit = useCallback((data) => {
 
   let name = name_is.current.getSelectedItems(); 
   let dom = dom_name.current.getSelectedItems(); 

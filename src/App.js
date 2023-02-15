@@ -1,20 +1,21 @@
-import React from 'react';
 import './App.css';
 import './Table/Table.css'
 import MainHeader from './Header/MainHeader';
 import MainTable from './Table/MainTable';
 import Pagination from './Table/Pagination/Pagination';
+import { useState } from 'react';
+
 
 function App() {
   //items = кол-ву строк в таблице на страницу
   const items = 4;
   const mainURL='http://localhost:3001/data';
-  const [searchValue, setSearchValue] = React.useState('');
-  const [currantPage, setCurrantPage] = React.useState(1);
-  const [pageCount, setPageCount] = React.useState(0);
-  const [data_mas, setData_mas] = React.useState([]);
-  const [masLength, setMasLength] = React.useState('');
-  const [formInputsFilter, setFormInputsFilter] = React.useState({});
+  const [searchValue, setSearchValue] = useState('');
+  const [currantPage, setCurrantPage] = useState(1);
+  const [pageCount, setPageCount] = useState(0);
+  const [data_mas, setData_mas] = useState([]);
+  const [masLength, setMasLength] = useState('');
+  const [formInputsFilter, setFormInputsFilter] = useState({});
 
   return (
     <div className="App">

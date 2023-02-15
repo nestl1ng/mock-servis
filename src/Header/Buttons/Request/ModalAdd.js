@@ -1,4 +1,3 @@
-import React from 'react'
 import '../ModalAdd.css'; 
 import FormAdd from './FormAdd';
 

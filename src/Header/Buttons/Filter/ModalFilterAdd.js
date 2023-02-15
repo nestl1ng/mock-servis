@@ -1,4 +1,3 @@
-import React from "react";
 import "../ModalAdd.css";
 import FormFilter from "./FormFilter";
 

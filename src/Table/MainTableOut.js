@@ -1,5 +1,6 @@
-import React from 'react'
 import axios from 'axios';
+import { useEffect } from 'react';
+
 
 const MainTableOut = ({searchValue, setPageCount, items, currantPage, data_mas, setData_mas,setShowRowView, setParapmsRow, setMasLength,mainURL,formInputsFilter}) => {
 	const url = mainURL+"?_page="+currantPage+"&_limit="+items;
@@ -9,7 +10,7 @@ const MainTableOut = ({searchValue, setPageCount, items, currantPage, data_mas, 
 		setParapmsRow(params);
 	}
 	
-	React.useEffect(() => {
+	useEffect(() => {
 		let FilterUrl ='';
 		Object.keys(formInputsFilter).forEach(function(key) {
 			if((typeof this[key]!== "undefined")&&(this[key].length!==0)){

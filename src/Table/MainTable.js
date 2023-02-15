@@ -1,11 +1,12 @@
-import React from 'react'
 import MainTableOut from './MainTableOut';
 import TableRowView from './TableView/TableRowView';
 import './Table.css'
+import { useState } from 'react';
+
 
 const MainTable=({searchValue, setPageCount, items, currantPage, data_mas, setData_mas, setMasLength,mainURL,formInputsFilter})=> {
-	const [showRowView,setShowRowView] = React.useState(false);
-	const [parapmsRow,setParapmsRow] = React.useState([]);
+	const [showRowView,setShowRowView] = useState(false);
+	const [parapmsRow,setParapmsRow] = useState([]);
 	const CloseView=()=>{
 		setShowRowView(false);
 	  }

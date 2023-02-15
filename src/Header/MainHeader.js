@@ -1,4 +1,3 @@
-import React from 'react'
 import  Search  from './Search/Search'
 import './Header.css'
 import FilterAlarm from './FilterAlarm/FilterAlarm'
